@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>SI-Medical-AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🧠 سامانه تصمیم‌یار پزشکی با هوش مصنوعی</h1>
+    <p>تشخیص سرطان پوست | مشاوره هوشمند | دوز دارو</p>
+</header>
+
+<section class="card">
+    <h2>🩺 تشخیص سرطان پوست با تصویر</h2>
+    <img src="/static/stickers/skin.png" class="sticker">
+    <form method="POST" enctype="multipart/form-data">
+        <label>عکس ناحیه پوست:</label>
+        <input type="file" name="skin_image" required>
+        <button>تحلیل تصویر</button>
+    </form>
+
+    {% if result %}
+        <p class="result">نتیجه تشخیص: {{ result }}</p>
+        <p class="confidence">درصد اطمینان مدل: {{ confidence }}%</p>
+    {% endif %}
+</section>
+
+<section class="card">
+    <h2>🤖 چت‌بات پزشکی SI-Medical-AI</h2>
+    <img src="/static/stickers/ai.png" class="sticker">
+    <form method="POST">
+        <label>سوال پزشکی شما:</label>
+        <textarea name="chat_prompt"></textarea>
+        <button>ارسال</button>
+    </form>
+
+    {% if chat_response %}
+        <div class="chat">{{ chat_response }}</div>
+    {% endif %}
+</section>
+
+<section class="card">
+    <h2>🧬 تعیین دوز دارو بر اساس ژنتیک</h2>
+    <p>
+        این سیستم با تحلیل ژن‌های متابولیسم دارو (CYP450)  
+        دوز پیشنهادی دارو را به‌صورت هوشمند ارائه می‌دهد.
+    </p>
+</section>
+
+<footer>
+    <p>📧 تماس با ما: si.medical9113@gmail.com</p>
+    <p>© 2025 SI-Medical-AI | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

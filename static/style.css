@@ -1,0 +1,83 @@
+body {
+    font-family: Vazirmatn, sans-serif;
+    background: linear-gradient(135deg, #0f3d3e, #1f7a6e);
+    color: #f5e6c8;
+    margin: 0;
+    direction: rtl;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #083d3d;
+    border-bottom: 3px solid gold;
+}
+
+.card {
+    background: rgba(0,0,0,0.4);
+    margin: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px gold;
+}
+
+button {
+    background: gold;
+    color: #083d3d;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sticker {
+    width: 60px;
+    margin: 10px 0;
+}
+
+footer {
+    background: #052f2f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* Mobile First */
+body {
+    font-size: 16px;
+}
+
+.card {
+    margin: 15px;
+    padding: 20px;
+}
+
+/* Inputs */
+input, textarea, button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Responsive Stickers */
+.sticker {
+    width: 45px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .card {
+        margin: 30px auto;
+        max-width: 700px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .card {
+        max-width: 900px;
+    }
+}
